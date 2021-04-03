@@ -192,7 +192,7 @@
                     </div>
                 </div>
                 <label for="MoreInfo"><i class="fa fa-sticky-note-o"></i> Note aggiuntive</label>
-                <input type="text" id="MoreInfo" name="MoreInfo" placeholder="Se necessario, specificare qui le informazioni aggiuntive" class="otherInfo">
+                <textarea rows="3" id="MoreInfo" name="MoreInfo" placeholder="Se necessario, specificare qui le informazioni aggiuntive" class="fieldText" style="resize: none;"></textarea>
                 <input type="submit" value="Inserisci visita" class="btn">
             </form>
         </div>
