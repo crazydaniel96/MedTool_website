@@ -130,9 +130,7 @@
                     </div>  
                     <div class="col-50">
                         <label for="visit_hour"><i class="fa fa-clock-o"></i> <b>Orario Visita</b></label>  
-                        <select name="visit_hour" id="visit_hour" class="fieldText" required>
-                        <option disabled selected value> -- seleziona prima il giorno -- </option>
-                        </select>
+                        <input type="time" id="visit_hour" class="fieldText" name="visit_hour" min="07:00" max="20:00" required>
                     </div>
                 </div>
                 <label for="MoreInfo"><i class="fa fa-sticky-note-o"></i> Note aggiuntive</label>

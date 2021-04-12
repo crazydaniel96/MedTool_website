@@ -4,6 +4,7 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 		<title>Studio d'Arenzo</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         
         <!-- for jquery calendar -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
@@ -11,6 +12,8 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 		<link href="styles/public-page.css" rel="stylesheet" type="text/css">
+        <link href="styles/in-progress.css" rel="stylesheet" type="text/css">
+        
 
 
         <!-- calendar jquery script -->
@@ -142,7 +145,7 @@
             <div id="about" class="tabcontent">
                 <div class="container">
                     <br>
-                    <div class="fieldText"> Numero di telefono: 3791169602 </div>
+                    <div class="fieldText"> Numero di telefono: <b>3791169602</b> </div>
                     <div class="fieldText">Metodi di pagamento accettati  <i class="fa fa-credit-card fa-2x"></i> <i class="fa fa-money fa-2x"></i> </div>
                     <small>In caso di inattività del numero è possibile prentare una visita attraverso la sezione "prenotazioni" in alto a sinistra.<br>In caso di problemi, telefonare tempestivamente per disdire.</small>
                 </div>
@@ -153,6 +156,25 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.8517323811963!2d15.375951942356911!3d41.69015027026108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133742e99fabf9b9%3A0x177484de9fc58b2e!2sVia%20Giuseppe%20de%20Cesare%2C%20107%2C%2071016%20San%20Severo%20FG!5e0!3m2!1sit!2sit!4v1596563118327!5m2!1sit!2sit" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
+
+            <!-- modal-->
+            <div id="AdviseModal" class="modal" style="display: block;">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <br><br>
+                        <span class="close">&times;</span>
+                        <br>
+                    </div>
+                    <div id="modal-body" class="modal-body">
+                        <br>
+                        <h2> Per infilitrazioni, controllo esami, o altre informazioni, contattare il numero 3791169602 </h2>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <script type="text/javascript" src="scripts/index.js"></script>
     </body>
