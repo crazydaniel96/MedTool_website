@@ -291,7 +291,6 @@
             select.options.length = 0;
             var Title_array = <?php print(json_encode($optionReport)); ?>; 
             var Category=document.getElementById("Category").value;
-            var select = document.getElementById("Title");
 
             for(index in Title_array) {
                 if (Title_array[index].Category==Category){
