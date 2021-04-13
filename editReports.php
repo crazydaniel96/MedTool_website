@@ -3,11 +3,10 @@
     session_start();
     // If the user is not logged in redirect to the login page...
     if (!isset($_SESSION['loggedin'])) {
-    	header('Location: loginForm.php');
+    	header('Location: index.php');
     	exit;
     }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +24,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
         <!-- customized libraries -->
-		    <link href="styles/page-content.css" rel="stylesheet" type="text/css">
+        <link href="styles/page-content.css" rel="stylesheet" type="text/css">
         <link href="styles/sidebar.css" rel="stylesheet" type="text/css">
   
 	</head>
@@ -72,36 +71,27 @@
                         <a href="#"><li>Sposta giorno</li></a>
                     </ul>
 
-                    <li data-toggle="collapse" data-target="#reports" class="collapsed">
+                    <li data-toggle="collapse" data-target="#reports" class="active">
                         <a href="#"><i class="fa fa-globe fa-lg"></i> Referti <span class="arrow"></span></a>
                     </li>  
-                    <ul class="sub-menu collapse" id="reports">
-                        <a href="editReports.php"><li>Modifica referto</li></a>
+                    <ul class="sub-menu collapse in" id="reports">
+                        <a href="#"><li class="active">Modifica referto</li></a>
                         <a href="addReport.php"><li>Aggiungi referto</li></a>
                     </ul>
 
-                    <li class="active">
-                      <a href="#"> 
+                    <a href="stats.php">
+                      <li>  
                         <i class="fa fa-user fa-lg"></i> Statistiche
-                      </a>
-                    </li>
+                      </li>
+                    </a>
                 </ul>
         </div>
     </div>
 
     <div class="page-content">
       <div class='container'>
-        <br>
-        <h2 style="text-align: center"><i class="fa fa-code-fork fa-3x">
-          </i>In costruzione <i class="fa fa-code-fork fa-3x"></i>
-        </h2>
-        <br>
-        <p>assenti mese corrente:</p><hr>
-        <p>assenti mese scorso:</p><hr>
-        <p>visite completate con <br>successo mese attuale:</p><hr>
-        <p>visite completate con <br>successo mese scorso:</p><hr>
-        <p>prenotazioni disponibili mese attuale:</p><br>
-        <br><br>
+        
+
       </div>
     </div>
 

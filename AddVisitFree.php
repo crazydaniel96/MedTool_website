@@ -68,8 +68,16 @@
                         <a href="#"><i class="fa fa-globe fa-lg"></i> Giorni Lavorativi <span class="arrow"></span></a>
                     </li>  
                     <ul class="sub-menu collapse" id="days">
-                        <a href="workingDays.php"><li class="active">Aggiungi/Rimuovi giorni</li></a>
+                        <a href="workingDays.php"><li>Aggiungi/Rimuovi giorni</li></a>
                         <a href="#"><li>Sposta giorno</li></a>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#reports" class="collapsed">
+                        <a href="#"><i class="fa fa-globe fa-lg"></i> Referti <span class="arrow"></span></a>
+                    </li>  
+                    <ul class="sub-menu collapse" id="reports">
+                        <a href="editReports.php"><li>Modifica referto</li></a>
+                        <a href="addReport.php"><li>Aggiungi referto</li></a>
                     </ul>
 
                     <a href="stats.php">
