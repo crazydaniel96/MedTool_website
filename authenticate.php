@@ -26,7 +26,10 @@
 				$_SESSION['loggedin'] = TRUE;
 				$_SESSION['name'] = $_POST['username'];
 				$_SESSION['id'] = $id;
-				header('Location: TodayVisits.php');
+				if ($_POST['username']=="ritaderrico")
+					header('Location: FindPerson.php');
+				else
+					header('Location: TodayVisits.php');
 			} else {
 				echo "<script>alert('Username o password errati');</script>";
 				echo "<script>window.location = 'loginForm.php';</script>";

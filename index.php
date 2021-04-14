@@ -161,7 +161,7 @@
             <div id="AdviseModal" class="modal" style="display: block;">
 
                 <!-- Modal content -->
-                <div class="modal-content">
+                <div class="modal-content" style="width: 600px;">
                     <div class="modal-header">
                         <br><br>
                         <span class="close">&times;</span>
@@ -169,7 +169,8 @@
                     </div>
                     <div id="modal-body" class="modal-body">
                         <br>
-                        <h2> Per infilitrazioni, controllo esami, o altre informazioni, contattare il numero 3791169602 </h2>
+                        <h2> Per infilitrazioni, controllo esami, o altre informazioni, contattare il numero </h2><br>
+                        <h1 style="text-align: center">3791169602</h1>
                         <br>
                     </div>
                 </div>

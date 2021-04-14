@@ -30,8 +30,15 @@
 	</head>
 
 	<body>
+
 		<!-- SIDEBAR -->
-		<?php include('common/sidebar.php');?>
+		<?php
+        if ($_SESSION['name']=="ritaderrico")
+            include('common/reduced_sidebar.php');
+        else
+            include('common/sidebar.php');
+    ?>
+		
 		<div class="page-content">
 			<div class='container'>
 				<?php
@@ -61,7 +68,7 @@
 					<span class="close">&times;</span>
 				</div>
 				<div class="modal-body">
-						<form onsubmit="ChangePassword()" method="post">
+						<form onsubmit="ChangePassword(this.OldPW.value,this.NewPW.value)">
 							<label for='OldPW'>Vecchia password</label>
 							<input type="password" name="OldPW" id="OldPW" class="fieldText" required>
 							<label for='NewPW'>Nuova password</label>
@@ -90,14 +97,17 @@
 				document.getElementById("PasswordModal").style.display = "block";
 			}
 
-			function ChangePassword(){
+			function ChangePassword(oldP,newP){
 				$.ajax({
-				    url: "RemoveBookingDate.php",
+				    url: "ChangePassword.php",
 				    type: "POST",
-				    data: { date: 'prova' },
+				    data: { OldPW: oldP,NewPW: newP},
 				    success: function(){
-				    	alert('Giornata rimossa correttamente');
-					}
+				    	alert('Password cambiata');
+						},
+						error: function(){
+				    	alert('Password errata, riprovare');
+						}
 				});
 			}
 
