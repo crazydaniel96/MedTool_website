@@ -8,7 +8,7 @@
     $date=$_POST['date'];
 
     while ($start<=$end){
-        $sql .= "INSERT INTO calendar (Day,name,VisitSpan) VALUES ('".$date ." ". $start."','".$_POST['name']."','".$_POST['hour']."');";
+        $sql .= "INSERT INTO calendar (Day,name,VisitSpan,private) VALUES ('".$date ." ". $start."','".$_POST['name']."','".$_POST['hour']."','".$_POST['show']."');";
         $start=date('H:i:s',strtotime($_POST['hour'],strtotime($start)));
     }
     

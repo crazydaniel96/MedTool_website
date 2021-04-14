@@ -11,11 +11,12 @@
                     </a>
                 </li>
                 
-                <li  data-toggle="collapse" data-target="#products" class="/AddVisit.php /AddVisitFree.php">
+                <li  data-toggle="collapse" data-target="#products" class="/AddVisit.php /AddVisit2.php /AddVisitFree.php">
                     <a href="#"><i class="fa fa-plus fa-lg"></i> Gestione Visite <span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse /AddVisit.php /AddVisitFree.php" id="products">
+                <ul class="sub-menu collapse /AddVisit.php /AddVisit2.php /AddVisitFree.php" id="products">
                     <a href="AddVisit.php"><li class="/AddVisit.php">Aggiungi Visita</li></a>
+                    <a href="AddVisit2.php"><li class="/AddVisit2.php">Aggiungi Visita Controllo</li></a>
                     <a href="AddVisitFree.php"><li class="/AddVisitFree.php">Aggiungi Visita - Libero</li></a>
                 </ul>
 
@@ -34,7 +35,6 @@
                 </li>  
                 <ul class="sub-menu collapse /workingDays.php" id="days">
                     <a href="workingDays.php"><li class="/workingDays.php">Aggiungi/Rimuovi giorni</li></a>
-                    <a href="#"><li>Sposta giorno</li></a>
                 </ul>
 
                 <li data-toggle="collapse" data-target="#reports" class="/editReports.php /addReport.php">

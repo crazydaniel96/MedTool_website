@@ -21,7 +21,7 @@
             days=[
                 <?php 
                     include ('Server.php');
-                    $sql = "SELECT Day FROM calendar WHERE booked=0 AND Day>=CURDATE()"; 
+                    $sql = "SELECT Day FROM calendar WHERE booked=0 AND private=0 AND Day>=CURDATE()"; 
                     $result = $connect->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {

@@ -32,7 +32,7 @@
         
         var eventi=[<?php
             include ('Server.php');
-            $sql = "SELECT Day,name,VisitSpan,booked FROM calendar WHERE Day>=CURDATE()"; 
+            $sql = "SELECT Day,name,VisitSpan,booked,private FROM calendar WHERE Day>=CURDATE()"; 
             $result = $connect->query($sql);
 
             if ($result->num_rows > 0) {
@@ -48,6 +48,17 @@
                     classNames: 'booked'
                   },
                 ";
+                }
+                else if ($row["private"]){
+                  echo "
+                    {
+                      title: '". $row["name"] ."',
+                      start: '". $row["Day"] ."',
+                      end: '". date('Y-m-d H:i:s',strtotime($row["VisitSpan"],strtotime($row["Day"]))) ."',
+                      color: 'grey',
+                      url: '#',
+                    },
+                  ";
                 }
                 else{
                   echo "
@@ -186,12 +197,23 @@
                       </div>
                     </div>
                     <hr>
-                    <input type="radio" id="1h" name="hour" value='+1 hour' required>
-                    <label for="1h" style='display: inline-block;'>1 ora</label><br>
-                    <input type="radio" id="30m" name="hour" value='+30 minutes' required>
-                    <label for="30m" style='display: inline-block;'>30 minuti</label><br>
-                    <input type="radio" id="15m" name="hour" value='+15 minutes' required>
-                    <label for="15m" style='display: inline-block;'>15 minuti</label>
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="radio" id="1h" name="hour" value='+1 hour' required>
+                        <label for="1h" style='display: inline-block;'>1 ora</label><br>
+                        <input type="radio" id="30m" name="hour" value='+30 minutes' checked required>
+                        <label for="30m" style='display: inline-block;'>30 minuti</label><br>
+                        <input type="radio" id="15m" name="hour" value='+15 minutes' required>
+                        <label for="15m" style='display: inline-block;'>15 minuti</label>
+                      </div>
+                      <div class="col-6">
+                        <input type="radio" id="Public" name="show" value='0' checked required>
+                        <label for="Public" style='display: inline-block;'>Pubblico</label><br>
+                        <input type="radio" id="Private" name="show" value='1' required>
+                        <label for="Private" style='display: inline-block;'>Privato</label>
+                      </div>
+                    </div>
+
                     <input type="submit" value="Aggiungi" class="btn">
 
                   </form>
