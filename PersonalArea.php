@@ -56,7 +56,14 @@
 				<p><?=$username?></p><br>
 				<p><b>Password:</b></p>
 				<p><?=$password?></p><br><br>
-				<button class="btn" onclick="ShowPWmodal()">Cambia password</button>
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-2">
+						<button class="btn" onclick="ShowPWmodal()">Cambia password</button>
+					</div>
+					<div class="col col-lg-2">
+						<a class="btn" href="logout.php">Logout</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
