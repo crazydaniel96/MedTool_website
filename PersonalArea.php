@@ -61,7 +61,7 @@
 						<button class="btn" onclick="ShowPWmodal()">Cambia password</button>
 					</div>
 					<div class="col col-lg-2">
-						<a class="btn" href="logout.php">Logout</a>
+						<a href="logout.php"><button class="btn">Logout</button></a>
 					</div>
 				</div>
 			</div>

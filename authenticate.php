@@ -27,7 +27,7 @@
 				$_SESSION['name'] = $_POST['username'];
 				$_SESSION['id'] = $id;
 				if ($_POST['username']=="ritaderrico")
-					header('Location: FindPerson.php');
+					header('Location: AddVisit.php');
 				else
 					header('Location: TodayVisits.php');
 			} else {

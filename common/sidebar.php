@@ -45,6 +45,12 @@
                     <a href="addReport.php"><li class="/addReport.php">Aggiungi referto</li></a>
                 </ul>
 
+                <li class="/History.php">
+                    <a href="History.php" style="display: block;">  
+                        <i class="fa fa-history fa-lg"></i> Storico
+                    </a>
+                </li>
+
                 <li class="/stats.php">
                     <a href="stats.php" style="display: block;">  
                         <i class="fa fa-bar-chart fa-lg"></i> Statistiche

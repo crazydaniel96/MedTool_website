@@ -6,6 +6,11 @@
 
             <ul id="menu-content" class="menu-content collapse out">
 
+                <li class="/AddVisit.php">
+                    <a href="AddVisit.php" style="display: block;">  
+                        <i class="fa fa-user fa-lg"></i> Aggiungi Visita
+                    </a>
+                </li>
 
                 <li data-toggle="collapse" data-target="#service" class="/FindPerson.php /FindDay.php">
                     <a href="#"><i class="fa fa-calendar fa-lg"></i> Gestione Appuntamenti <span class="arrow"></span></a>

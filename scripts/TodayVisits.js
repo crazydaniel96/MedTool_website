@@ -15,3 +15,27 @@ window.onclick = function(event) {
   }
 }
 
+function Get_history(){
+
+  var form = document.createElement("form");   // shorter with jquery using $('#insert_form')
+  form.setAttribute("method", "post");
+  form.setAttribute("id", "hist");
+  form.setAttribute("action", "History.php");
+
+  var i = document.createElement("input");
+  i.type = "text";
+  i.name = "NameSearch";
+  i.value = document.getElementById("NameF").value;
+
+  var j = document.createElement("input");
+  j.type = "text";
+  j.name = "SurnameSearch";
+  j.value = document.getElementById("SurnameF").value;
+
+  form.appendChild(i);
+  form.appendChild(j);
+  document.body.appendChild(form);
+
+  document.getElementById("hist").submit();
+}
+
