@@ -72,7 +72,7 @@
             </div>
 
             <label for="Header">Intestazione</label>
-            <textarea rows="1" id="Header" name="Header" placeholder="Alla cortese attenzione del dott." class="fieldText" style="resize: none;"></textarea>
+            <textarea rows="1" id="Header" name="Header" class="fieldText" style="resize: none;">Alla cortese attenzione del dott.</textarea>
             <label for="Body">Corpo</label>
             <textarea rows="25" id="Body" name="Body" class="fieldText" style="resize: none;"></textarea>
 

@@ -165,6 +165,19 @@
 								//console.log("Document created successfully");
 						});
 					}
+
+					function saveHistory_complete(){
+						var body=document.getElementById("Body").value;
+						$.ajax({
+								type: "POST",
+								url: "UpdateResult.php",
+								data: "result=Success&id=<?php echo $_POST["idF"]?>&NameF=<?php echo $_POST["NameF"]?>&SurnameF=<?php echo $_POST["SurnameF"]?>&Category=<?php echo $_POST["Category"]?>&body="+body, //no interaction with following line 
+								success: function(){
+									window.location.href = "TodayVisits.php";
+								}
+						})
+
+					}
 				</script>
 	</head>
 	<body>
@@ -198,8 +211,14 @@ RES. " . $_POST['CityNowF'] . " IN " . $_POST['AddressF'] . "
 			?>
 
 
-
-			<button class="btn" onclick="generate()">Scarica referto</button>
+			<div class="row justify-content-md-center">
+				<div class="col col-lg-2">
+					<button class="btn" onclick="generate()">Scarica referto</button>
+				</div>
+				<div class="col col-lg-2">
+					<button class="btn" onclick="saveHistory_complete()"> Fine visita  </button>
+				</div>
+			</div>
 
     </div>
 

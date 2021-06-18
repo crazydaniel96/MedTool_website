@@ -89,7 +89,12 @@
 	<body>
 
     <!-- SIDEBAR -->
-    <?php include('common/sidebar.php');?>
+    <?php
+        if ($_SESSION['name']=="ritaderrico")
+            include('common/reduced_sidebar.php');
+        else
+            include('common/sidebar.php');
+    ?>
 
     <div class="page-content">
         <div class='container'>

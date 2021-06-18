@@ -68,6 +68,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
+            <a onclick="Get_history()" href="#"><i class="fa fa-history fa-3x" aria-hidden="true"></i></a>
             <h2 id="NameLabel" style="display: inline"></h2><h2>&nbsp;[ID=</h2><h2 id="idPar" style="display: inline"></h2><h2>]</h2><br><br>
                 <span class="close">&times;</span>
                 <br>
@@ -95,6 +96,7 @@
                         <div class="col-25">
                             <label for="DayBornF">Giorno di nascita</label>
                             <input type="date" id="DayBornF" name="DayBornF" class="fieldText" required>
+                            <input type="hidden" id="idF" name="idF">
                         </div>
                     </div>
 
@@ -168,7 +170,7 @@
                     while (CurrPatientInfos[i].id!=ID_Patient) {
                         i++;
                     }
-                    document.getElementById("NameLabel").innerHTML ="Riepilogo " + CurrPatientInfos[i].Surname +" " + CurrPatientInfos[i].Name;
+                    document.getElementById("NameLabel").innerHTML = "&nbsp&nbsp"+ CurrPatientInfos[i].Surname +" " + CurrPatientInfos[i].Name;
                     document.getElementById("idPar").innerHTML = ID_Patient;
 
                     document.getElementById("NameF").value = CurrPatientInfos[i].Name;
@@ -190,6 +192,7 @@
                     if (CurrPatientInfos[i].DayBorn=="0000-00-00")
                         document.getElementById("DayBornF").style.border="2px solid red";
                     document.getElementById("MoreInfoF").value = CurrPatientInfos[i].Notes;
+                    document.getElementById("idF").value = CurrPatientInfos[i].id;
 
                     //show modal content
                     document.getElementById("SummaryPatientModal").style.display = "block";
@@ -202,9 +205,9 @@
                     $.ajax({
                         type: "POST",
                         url: "UpdateResult.php",
-                        data: "result=Success&id="+document.getElementById("idPar").innerHTML, //no interaction with following line 
+                        data: "result=Success&id="+document.getElementById("idF").value+"&NameF="+document.getElementById("NameF").value+"&SurnameF="+document.getElementById("SurnameF").value, //no interaction with following line 
                         success: function(){
-                            var row=document.getElementById(document.getElementById("idPar").innerHTML);
+                            var row=document.getElementById(document.getElementById("idF").value);
                             row.parentNode.removeChild(row);
                             document.getElementById("SummaryPatientModal").style.display = "none";
                         }
@@ -219,9 +222,9 @@
                     $.ajax({
                         type: "POST",
                         url: "UpdateResult.php",
-                        data: "result=Absent&id="+document.getElementById("idPar").innerHTML,
+                        data: "result=Absent&id="+document.getElementById("idF").value,
                         success: function(){
-                            var row=document.getElementById(document.getElementById("idPar").innerHTML);
+                            var row=document.getElementById(document.getElementById("idF").value);
                             row.parentNode.removeChild(row);
                             document.getElementById("SummaryPatientModal").style.display = "none";
                         }
