@@ -90,7 +90,7 @@
     <!-- SIDEBAR -->
     
     <?php
-        if ($_SESSION['name']=="ritaderrico")
+        if ($_SESSION['restricted'])
             include('common/reduced_sidebar.php');
         else
             include('common/sidebar.php');

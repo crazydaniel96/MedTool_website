@@ -118,6 +118,7 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 @media (max-width: 767px) {
   .nav-side-menu {
     position: relative;
@@ -150,6 +151,12 @@
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;
+  }
+  #logout_menu{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 body {
